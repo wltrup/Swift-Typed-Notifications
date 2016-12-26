@@ -20,7 +20,7 @@ series because there's a lot of good stuff there.
 If you have done much iOS development, especially in the olden days of
 Objective-C, you'll have noticed that a lot of it is very much "stringly" typed,
 that is, a lot of things are determined by strings (`NSString` instances).
-Notifications are no exception and, in fact, is one of the more annoying
+Notifications are no exception and, in fact, are one of the more annoying
 examples. Not only the notification names are strings that you could
 accidentally mistype but the user-info dictionary is, well, a dictionary that
 can contain anything, of any object type. Upon receiving a notification, you
