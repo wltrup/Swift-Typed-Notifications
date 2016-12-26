@@ -12,8 +12,8 @@ what they suggest in those talks. I'm speaking of **typed notifications**.
 If you haven't watched them, you should. Actually, you should watch the entire
 series because there's a lot of good stuff there.
 
-[Swift Talk #27: Typed Notifications (Part 1)](https://talk.objc.io/episodes/S01E27-typed-notifications-part-1)
-[Swift Talk #28: Typed Notifications (Part 2)](https://talk.objc.io/episodes/S01E28-typed-notifications-part-2)
+- [Swift Talk #27: Typed Notifications (Part 1)](https://talk.objc.io/episodes/S01E27-typed-notifications-part-1)
+- [Swift Talk #28: Typed Notifications (Part 2)](https://talk.objc.io/episodes/S01E28-typed-notifications-part-2)
 
 ## The problem ##
 
@@ -25,7 +25,7 @@ examples. Not only the notification names are strings that you could
 accidentally mistype but the user-info dictionary is, well, a dictionary that
 can contain anything, of any object type. Upon receiving a notification, you
 have to make sure that everything in it has the expected type and then you do a
-lot of casting. That's very error prone and there has to be a better, more
+lot of casting. That's very error-prone and there has to be a better, more
 **swifty**, way to handle all that.
 
 ## My solution ##
@@ -62,8 +62,8 @@ enum MyAppNotifs: NotificationEnum {
 
 
 // This is how an interested party would subscribe to receive notifications of a particular kind and case:
-// (The token is an object you store, say, in your view controller so that when the view controller goes
-//  out of scope, the observer gets automatically removed from the notification center)
+// (The token is an object you store --- say, in your view controller --- so that when the view controller
+//  goes out of scope, the observer gets automatically removed from the notification center)
 var token = center.addObserver(name: MyAppNotifs.appDownloadedDataNotif) {
     (notification: MyAppNotifs, object: Any?) in
 
@@ -81,7 +81,7 @@ let notif = MyAppNotifs.appDownloadedData(title: "Test", index: 5)
 center.post(notification: notif)
 ```
 
-For details and the full implementation of the necessary extensions, take a look at the [playground]() in this repository.
+For details and the full implementation of the necessary extensions, take a look at the [playground](https://github.com/wltrup/Swift-Typed-Notifications/blob/master/Typed%20Notifications.playground/Contents.swift) in this repository.
 
 ## Author ##
 
