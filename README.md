@@ -83,10 +83,6 @@ center.post(notification: notif)
 
 For details and the full implementation of the necessary extensions, take a look at the [playground](https://github.com/wltrup/Swift-Typed-Notifications/blob/master/Typed%20Notifications.playground/Contents.swift) in this repository.
 
-## Author ##
-
-Wagner Truppel, trupwl@gmail.com
-
 ## License ##
 
 The playground file is available under the MIT license. See the LICENSE
